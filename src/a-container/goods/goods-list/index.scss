@@ -1,0 +1,37 @@
+
+.goods_list {
+    .shop_img {
+        display: flex;
+        justify-content: center;
+        img {
+            width: 22px!important;
+            height: 20px!important;
+            margin-bottom: 5px!important;
+        }
+        p {
+            font-size: 10px!important;
+        }
+    }
+    .operats {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        &_inp {
+            display: flex;
+            align-items: center;
+            >input {
+                height: 34px;
+                line-height: 34px;
+                border-radius: 4px;
+                border: 1px solid #DCDCE6;
+                width: 270px;
+            }
+            >button {
+                height: 34px;
+                line-height: 34px;
+                margin-left: 18px;
+            }
+        }
+    }
+}

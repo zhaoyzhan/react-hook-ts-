@@ -1,0 +1,175 @@
+
+.live_manage_table_info {
+    padding-left: 100px;
+    >div {
+        padding-top: 13px;
+        >h4 {
+            color: #333333;
+            line-height: 12px;
+            font-weight: 400;
+            margin-bottom: 7px;
+        }
+        >p {
+            font-size: 12px;
+            color: #9FA2A8;
+            line-height: 17px;
+        }
+    }
+}
+
+.market_livemanage_table {
+    .ant-table-thead {
+        >tr {
+            >th {
+                &:nth-of-type(2) {
+                    padding-left: 120px;
+                }
+            }
+        }
+    }
+}
+
+.live_manage_create_steps {
+    >li {
+        >img {
+            width: 150px;
+            height: 90px;
+            margin-bottom: 20px;
+        }
+        >p {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 28px;
+            text-align: center;
+            color: #9FA2A8;
+            >span {
+                margin-right: 12px;
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                font-size: 14px;
+                font-weight: 400;
+                border-radius: 100%;
+                background: #fff;
+                color:#9FA2A8;
+                border: 1px solid #9FA2A8;
+            }
+            &.active {
+                color: var(--activeColor);
+                >span {
+                    background: var(--activeColor);
+                    color: #fff;
+                    border: none;
+                }
+            }
+            &.pass {
+                color: rgba(218, 60, 71, .5);
+                >span {
+                    background: rgba(218, 60, 71, .5);
+                    border: none;
+                    color: #fff;
+                }     
+            }
+        }
+    }
+    >img {
+        max-width: 300px;
+        width: 20%;
+        margin: 40px 60px 0;
+        flex: 1;
+    }
+}
+
+.step_form_form {
+    .p_l_84 {
+        .ant-form-item-label {
+            >label {
+                justify-content: flex-end;
+                width: 145px!important; 
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+    .step_form_content {
+        border-bottom: 1px solid #EAEAEA;
+        max-width: 1022px; 
+        position: relative;
+        .input_last_fill {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #9FA2A8;
+        }
+        >input {
+            max-width: 1022px; 
+            margin-bottom: 25px;
+            border: none;
+        }
+    }
+    .ant-form-item-extra {
+        font-size: 14px!important;
+    }
+}
+
+.step_form_content_aswarning {
+    >p {
+        color: #9FA2A8;
+        line-height: 20px;
+        >span {
+            color: #607CB4;
+            cursor: pointer;
+        }
+        &:first-of-type {
+            margin: 12px 0 6px;
+        }
+    }
+}
+
+.step_form_tooltip {
+    .ant-tooltip-content {
+        box-shadow: 0px 2px 10px 0px rgba(227, 232, 237, 0.77);
+        .ant-tooltip-inner {
+            color: #0E1726;
+            padding: 20px;
+            line-height: 20px;
+        }
+    }
+}
+
+.live_manage_step3 {
+    >h4 {
+        font-size: 15px;
+        font-weight: 500;
+        color: #0E1726;
+        line-height: 21px;
+        margin-bottom: 18px;
+    }
+    >div.params {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+}
+
+.livemanage_step_table {
+    .ant-table-thead {
+        >tr {
+            >th {
+                &:nth-of-type(2) {
+                    padding-left: 20px;
+                }
+            }
+        }
+    }
+    .live_manage_step_info {
+        >h4 {
+            font-size: 14px;
+            font-weight: 400;
+            color: #333333;
+        }
+    }
+}

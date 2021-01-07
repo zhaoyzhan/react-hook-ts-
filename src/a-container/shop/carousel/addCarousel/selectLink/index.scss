@@ -1,0 +1,38 @@
+.radio-wrap {
+  width: 100%;
+  font-size: 14px;
+  color: #9fa2a8;
+}
+.select-list li {
+  display: flex;
+  padding: 12px 0;
+  border-bottom: 1px solid #eaeaea;
+  .image {
+    margin: 0 15px;
+    width: 60px;
+    height: 60px;
+    background: #d8d8d8;
+    border-radius: 2px;
+  }
+  .content {
+    padding: 5px 0 0;
+  }
+  .ant-radio-wrapper {
+    padding: 18px 0 0;
+  }
+  
+}
+
+.search-link-box {
+    display: flex;
+    .ant-btn {
+        margin: 0 0 0 16px;
+        width: 88px;
+        height: 32px;
+        border-radius: 4px;
+        color: #DA3C47;
+        background: #FBEDEE;
+        border: 0 none;
+    }
+  
+}

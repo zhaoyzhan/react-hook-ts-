@@ -1,0 +1,39 @@
+
+
+.live_shop {
+    &_params {
+        margin-bottom: 18px;
+        justify-content: space-between;
+    }
+}
+
+.market_liveshop_table {
+    table {
+        color: #333;
+        tr {
+            th:first-child {
+                padding-left: 30px;
+            }
+            td:first-child {
+                padding-left: 30px;
+            }
+        }
+    }
+}
+.live_shop_modal {
+    .ant-modal-title {
+        display: none!important;
+    }
+    .live_shop_modal_con {
+        margin: 68px 0 40px;
+        >img {
+            width: 52px;
+            height: 52px;
+            margin-bottom: 34px;
+        }
+        >p {
+            color: #333333;
+            line-height: 20px;
+        }
+    }
+}

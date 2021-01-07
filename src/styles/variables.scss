@@ -1,0 +1,23 @@
+
+// 设置全局变量 调用需要(var('name'))
+:root{
+    --appBg: #2E323F; // html页面整体背景色
+    --headerBg: transparent; // 头部导航背景色
+    --navBarHeight: 74px; // 头部导航的高度
+    --footerHeight: 104px; // footer高度
+    --sectionBg: #ffffff; // section内容主体背景色
+    --menuWidth: 240px; // 左侧menu的宽度
+    --menuBg: transparent; // 左侧menu的宽度
+    --subMenuBg: #2E323F; // menu的背景色
+    --menuHover:#DA3C47; // menu滑过的颜色
+    --menuItemActive: #DA3C47; // menu按钮选中的颜色
+    --activeColor: #DA3C47; // 主色调
+    --activeColor2: #538FFF;  //二期主色调
+    --navBHeight: 92px;
+    --activeColorBg: rgba(218, 60, 71, .1);
+}
+
+// 左侧menu合上的时候
+#app .hideSidebar{
+    --menuWidth: 36px;
+}

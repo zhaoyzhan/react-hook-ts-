@@ -1,0 +1,75 @@
+.pannel-item {
+    margin: 18px 0 0 18px;
+    padding: 18px;
+    width: 624px;
+    height: 338px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px 0px rgba(227, 232, 237, 0.6);
+    border-radius: 8px;
+}
+
+.pannel-item .title {
+    font-weight: bold;
+    font-size: 20px;
+    color: #333;
+}
+
+.pannel-item .title .tips {
+   margin:0 0 0 12px;
+   color: #9FA2A8; 
+   font-size: 12px;
+   line-height: 30px;
+}
+.pannel-item .list {
+    display: flex;
+    justify-content: center;
+}
+.pannel-item .list li {
+    position: relative;
+    margin: 60px 0 0;
+    width: 200px;
+    text-align: center;
+}
+
+.pannel-item .list li::after {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    content: ' ';
+    width: 1px;
+    height: 40px;
+    background: #EEEEF4;
+}
+
+.pannel-item .list li:last-child::after {
+    display: none;
+}
+
+
+.pannel-item .list .tit {
+    color: #979797;
+    font-size: 14px;
+    font-weight: bold;
+}
+.pannel-item .list .number {
+    padding: 20px 0;
+    color: #313030;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.pannel-item .list .money {
+    color: #DA3C3C;
+}
+
+.pannel-item .list .money .unit {
+    font-size: 20px;
+}
+
+.pannel-item .list .tagging {
+    font-size: 12px;
+    color: #979797;
+}
+
+

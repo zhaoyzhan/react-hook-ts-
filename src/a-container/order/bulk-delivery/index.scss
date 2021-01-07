@@ -1,0 +1,23 @@
+
+.bulk_delivery_path {
+    >ul {
+        >li {
+            >span {
+                width: 20px;
+                height: 20px;
+                background: var(--activeColorBg);
+                text-align: center;
+                line-height: 20px;
+                color: var(--activeColor);
+                border-radius: 50%;
+                margin-right: 12px;
+            }
+            >p {
+                color: #0E1726;
+            }
+            &:not(:last-child) {
+                margin-right: 60px;
+            }
+        }
+    }
+}

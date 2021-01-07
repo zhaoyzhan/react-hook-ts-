@@ -1,0 +1,90 @@
+
+.market_coupon_params {
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.market_coupon_edit {
+    padding: 18px 18px 30px;
+    h2 {
+        font-size: 15px;
+        font-weight: 500;
+        color: #313030;
+        line-height: 21px;
+        margin-bottom: 30px;
+    }
+    form {
+        .ant-form-item-label {
+            label {
+                width: 118px!important;
+                justify-content: flex-end;
+                margin-right: 18px;
+                height: 34px;
+                &::after {
+                    display: none;
+                }
+            }
+        }
+        .coupon_sen_num {
+            >div {
+                &:first-child {
+                    margin-right: 30px;
+
+                }
+            }
+        }
+        .ant-input-affix-wrapper {
+            padding: 0 11px;
+            .ant-input-suffix {
+                color: #0E1726;
+            }
+        }
+    }
+}
+
+.market_coupon_goods_list {
+    margin-bottom: 47px;
+    li {
+        justify-content: space-between;
+        &.head {
+            height: 44px;
+            background: #F9F9F9;
+            border-radius: 4px 4px 0px 0px;
+            padding-left: 198px;
+            padding-right: 118px;
+            font-weight: 500;
+            color: #333333;
+        }
+        &.item {
+            padding: 30px 103px 30px 100px;
+            border-bottom: 1px solid #EEEEF4;
+            >div {
+                .table_order_img {
+                    margin-right: 12px;
+                    >img {
+                        width: 20px!important;
+                        height: 20px!important;
+                        margin-bottom: 4px!important;
+                    }
+                    >p {
+                        color: #B3B3B3!important;
+                        font-size: 10px!important;
+                        line-height: 10px!important;
+                    }
+                }
+                .table_info {
+                    >h4 {
+                        color: #333333;
+                        line-height: 12px;
+                        margin-bottom: 7px;
+                    }
+                    >p {
+                        font-size: 12px;
+                        color: #9FA2A8;
+                        line-height: 17px;
+                    }
+                }
+            }
+        }
+    }
+}

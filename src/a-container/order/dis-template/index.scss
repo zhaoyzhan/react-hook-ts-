@@ -1,0 +1,126 @@
+
+.order_template_box {
+    display: grid;
+    grid-template-columns: 390px 390px 390px 390px;
+    justify-content: space-between;
+    gap: 18px;
+    >li {
+        padding: 30px 18px;
+        background: #fff;
+        min-height: 322px;
+        width: 390px;
+        border-radius: 4px;
+        &:first-child {
+            padding-top: 90px;
+            align-items: center;
+            cursor: pointer;
+            >p {
+                color: #313030;
+                line-height: 20px;
+                pointer-events: none;
+            }
+            &.active {
+                .active {
+                    display: block;
+                }
+                .disabled {
+                    display: none;
+                }
+            }
+            &.disabled {
+                .active {
+                    display: none;
+                }
+                .disabled {
+                    display: block;
+                }
+            }
+        }
+        &:not(:first-child) {
+            >h4 {
+                color: #313030;
+                line-height: 28px;
+                margin-bottom: 30px;
+            }
+            >p {
+                margin-bottom: 20px;
+                display: flex;
+                >span {
+                    &.label {
+                        width: 56px;
+                        min-width: 56px;
+                        margin-right: 30px;
+                        color: #9FA2A8;
+                        line-height: 18px;
+                    }
+                    &.value {
+                        color: #000000;
+                        line-height: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.order_template_form {
+    .ant-form-item-label {
+        >label {
+            margin-right: 18px;
+            &::before {
+                display: none!important;
+            }
+            &::after {
+                display: none;
+            }
+        }
+    }
+    .name_label {
+        .ant-form-item-label {
+            >label {
+                font-weight: 500;
+                color: #0E1726;
+                line-height: 20px;
+            }
+        }
+    }
+    .add_yf {
+        border: none;
+        background: var(--activeColorBg);
+        color: var(--activeColor);
+    }
+    .adds_nums_list {
+        position: relative;
+        &:hover {
+            >span {
+                &.del {
+                    display: block;
+                }
+            }
+        }
+        >span {
+            &.del {
+                position: absolute;
+                right: 23px;
+                bottom: 6px;
+                color: var(--activeColor);
+                cursor: pointer;
+                display: none;
+            }
+        }
+    }
+    .ant-select {
+        >.ant-select-selector {
+            .ant-select-selection-item {
+                height: 24px!important;
+                line-height: 24px!important;
+                background: #F1F1F1;
+                border-radius: 4px;
+                display: flex;
+                align-items: center;
+                color: #9FA2A8;
+                font-weight: 400;
+            }
+        }
+    }
+}

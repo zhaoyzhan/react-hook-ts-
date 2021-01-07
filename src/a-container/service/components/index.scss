@@ -1,0 +1,141 @@
+
+.service_params {
+    margin-bottom: 18px;
+    .selects {
+        margin-bottom: 20px;
+    }
+    label {
+        color: #0E1726;
+        width: 56px;
+        height: 20px;
+        line-height: 20px;
+        margin-right: 12px;
+    }
+}
+
+.service_handle_table {
+    >ul {
+        li {
+            display: grid;
+            grid-template-columns: 41% 25% 15% 19%;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            &.table_head {
+                padding-top: 18px;
+                height: 44px;
+                background: #F9F9F9;
+                border-radius: 4px 4px 0px 0px;
+                .table_th {
+                    font-weight: 500;
+                    color: #333333;
+                    line-height: 20px;
+                }
+            }
+            &.table_item {
+                .table_tr {
+                    &_head {
+                        height: 44px;
+                        background: #F9F9F9;
+                        padding: 0 20px 0 30px;
+                        color: #333333;
+                        justify-content: space-between;
+                    }
+                    &:last-child {
+                        .table_tr_con {
+                            border-right: 1px solid #EEEEF4;
+                        }
+                    }
+                    &_con {
+                        padding: 18px 0;
+                        border-left: 1px solid #EEEEF4;
+                        border-bottom: 1px solid #EEEEF4;
+                        height: calc(100% - 44px);
+                        .table_order_img {
+                            margin-right: 12px;
+                            >img {
+                                width: 20px!important;
+                                height: 20px!important;
+                                margin-bottom: 4px!important;
+                            }
+                            >p {
+                                color: #B3B3B3!important;
+                                font-size: 10px!important;
+                                line-height: 10px!important;
+                            }
+                        }
+                        .order_info {
+                            >h3 {
+                                font-size: 14px;
+                                font-weight: 400;
+                                color: #333333;
+                                line-height: 12px;
+                                margin-bottom: 7px;
+                            }
+                            >p {
+                                font-size: 12px;
+                                color: #9FA2A8;
+                                line-height: 17px;
+                                >span {
+                                    &:first-child {
+                                        margin-right: 18px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.tr_status {
+                        .table_tr_con {
+                            >p {
+                                width: 84px;
+                                height: 24px;
+                                background: var(--activeColorBg);
+                                border-radius: 4px;
+                                color: var(--activeColor);
+                                font-size: 12px;
+                                line-height: 2;
+                                text-align: center;
+                            }
+                        }
+                    }
+                    &.tr_back {
+                        .table_tr_con {
+                            >p {
+                                color: #333333;
+                                line-height: 20px;
+                                margin-bottom: 6px;
+                                width: 132px;
+                            }
+                            >div {
+                                width: 132px;
+                                >img {
+                                    width: 40px;
+                                    height: 40px;
+                                    &:not(:last-child) {
+                                        margin-right: 6px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .text_center {
+        text-align: center;
+    }
+}
+
+.service_modal_box {
+    padding-top: 12px;
+    p {
+        line-height: 20px;
+        color: #333;
+    }
+    label {
+        color: #333333;
+        line-height: 20px;
+        margin-right: 12px;
+        white-space: nowrap;
+    }
+}

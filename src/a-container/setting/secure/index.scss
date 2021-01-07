@@ -1,0 +1,45 @@
+
+.setting_secure_form {
+    .p_l_84 {
+        .ant-form-item-label {
+            >label {
+                width: 100px!important;
+                justify-content: flex-end;
+                line-height: 1;
+                margin-right: 12px;
+            }
+        }
+    }
+    .after {
+        .ant-form-item-label {
+            >label {
+                &:before {
+                    display: none!important;
+                }
+                &:after {
+                    display: inline-block;
+                    margin-right: 4px;
+                    color: #ff4d4f;
+                    font-size: 14px;
+                    font-family: SimSun, sans-serif;
+                    line-height: 1;
+                    content: '*';
+                }
+            }
+        }
+    }
+    .inp_width_874 {
+        width: 874px;
+        border-radius: 4px;
+        border: 1px solid #EAEAEA;
+    }
+}
+
+.settig_secure_list {
+    >div {
+        height: 56px;
+        border-bottom: 1px solid #EAEAEA;
+        justify-content: space-between;
+        width: 63%;
+    }
+}

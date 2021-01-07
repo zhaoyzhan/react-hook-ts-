@@ -1,0 +1,83 @@
+.ant-select {
+    border-radius: 4px;
+    .ant-select-selector {
+        height: 36px!important;
+        input {
+            height: 34px!important;
+        }
+    }
+    .ant-select-selection-item {
+        height: 34px!important;
+        line-height: 34px!important;
+    }
+    .ant-select-selection-placeholder {
+        height: 32px!important;
+        line-height: 32px!important;
+    }
+}
+.ant-col {
+    &.ant-form-item-control {
+        justify-content: center;
+    }
+}
+
+.ant-input {
+    height: 36px!important;
+    line-height: 36px!important;
+}
+
+.ant-btn {
+    height: 34px!important;
+    line-height: 1!important;
+    border-radius: 4px!important;
+}
+
+button.ghost_btn {
+    background: #F1F1F1!important;
+    border: none!important;
+}
+
+.ant-picker {
+    height: 34px!important;
+    border-radius: 4px!important;
+}
+
+.default_table {
+    tr {
+        &.ant-table-expanded-row {
+            >td {
+                background: #fff;
+            }
+        }
+    }
+    .ant-table-thead {
+        >tr {
+            >th {
+                background: #F2F2F2;
+                font-size: 14px;
+                font-weight: 500;
+                color: #313030;
+                line-height: 20px;
+                padding: 12px 0;
+            }
+        }
+    }
+    .ant-table-tbody {
+        >tr {
+            >td {
+                padding: 20px;
+            }
+        }
+    }
+    .sort_operat_btns {
+        >button {
+            padding: 0;
+            margin: 0;
+            font-size: 14px;
+            font-weight: 500;
+            &:not(:last-child) {
+                margin-right: 18px;
+            }
+        }
+    }
+}

@@ -1,0 +1,105 @@
+
+.layout_container{
+    background: rgba(249,249,249,1);
+	overflow: hidden;
+	display: flex;
+	>.contents {
+		flex: 1;
+	}
+}
+
+.header {
+	position: relative;
+	z-index:999;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: var(--navBarHeight);
+	&-logo {
+		>h1 {
+			color: #fff;
+		}
+	}
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background:rgba(255,255,255,1);
+	box-shadow: 0px 2px 4px 0px rgba(227, 232, 237, 0.6);
+	>ul {
+		display: flex;
+		align-items: center;
+		padding-right: 30px;
+		margin-bottom: 0;
+		>li {
+			cursor: pointer;
+			&:not(:last-child) {
+				margin-right: 34px;
+			}
+			&:hover {
+				>i {
+					color: var(--activeColor)!important;
+				}
+				>span {
+					color: var(--activeColor)!important;
+				}
+			}
+		}
+	}
+}
+.ant-dropdown{
+	.ant-dropdown-menu{
+		padding:0;
+	}
+	.ant-dropdown-menu-item,
+	.ant-dropdown-menu-submenu-title{
+		padding:10px 20px;
+		color:#666666;
+		font-size:12px;
+		.text{
+			display: inline-block;
+			font-size: 12px;
+			color: rgba(102,102,102,1);
+			vertical-align: middle;
+			span{
+				color: #666666;
+				margin-left: 5px;
+			}
+			span.active {
+				color: #F5222D;
+			}
+		}
+		.icon{
+			width: 14px;
+			height: 14px;
+			display: inline-block;
+			margin-right: 10px;
+			vertical-align: middle;
+			background-repeat: no-repeat;
+			background: center center;
+		}
+		.icon.setting{
+			background-image: url('../assets/icons/person_set.png');
+    		background-size: 100% auto;
+		}
+		.icon.logout{
+			background-image: url('../assets/icons/out.png');
+    		background-size: 100% auto;
+		}
+		.icon.message{
+			background-image: url('../assets/icons/message.png');
+    		background-size: 100% auto;
+		}
+	}
+	.ant-dropdown-menu-submenu-title{
+		color: rgba(51,51,51,1);
+		border-bottom: 1px dashed #ccc;
+		font-weight: bold;
+		font-size: 12px;
+		background: #fff;
+		cursor: auto;
+		user-select: none;
+	}
+}
+
+.content_height .padding_22_18 { width: 100%;}

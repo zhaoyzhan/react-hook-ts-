@@ -1,0 +1,29 @@
+
+.bread_crumbs {
+    >ul {
+        display: flex;
+        align-items: center;
+        margin-bottom: 18px;
+        >li {
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 28px;
+            color: #0E1726;
+            >span {
+                padding: 0 5px;
+                color: #9FA2A8;
+            }
+            >p {
+                margin: 0;
+            }
+            &.is_active {
+                >p {
+                    cursor: pointer;
+                    color: #9FA2A8;
+                }
+            }
+        }
+    }
+}

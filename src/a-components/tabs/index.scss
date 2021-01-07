@@ -1,0 +1,21 @@
+.default_tabs {
+    background: #fff;
+    padding: 0 30px;
+    margin-bottom: 10px;
+    box-shadow: 0px 2px 4px 0px rgba(227, 232, 237, 0.6);
+    border-radius: 4px;
+    .ant-tabs-nav {
+        margin-bottom: 0;
+        .ant-tabs-tab {
+            padding-top: 16px;
+            margin-right: 0;
+            color: #9FA2A8;
+            &:not(:last-child) {
+                margin-right: 60px;
+            }
+        }
+        &:before {
+            border: none;
+        }
+    }
+}

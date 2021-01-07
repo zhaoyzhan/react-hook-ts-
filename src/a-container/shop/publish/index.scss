@@ -1,0 +1,94 @@
+.publish-wrap {
+    
+        height: 780px;   
+        .first-text {
+            margin: 110px 0 ;
+            color: #0E1726;
+            font-size: 20px;
+            text-align: center;
+        }
+}
+.publish-btn {
+    display: block;
+    margin: 0 auto;
+    width: 280px;
+    height: 40px;
+    line-height: 32px;
+    font-size: 20px;
+}
+.publish-steps { 
+    .list {
+        margin: 80px auto 0;
+        display: flex; 
+        justify-content:space-between;
+        width: 1000px;
+        .item {
+            position: relative;
+            width: 180px;
+            text-align: center;
+        }
+        .line {
+            position: absolute;
+            left: 100%;
+            top: 40px;
+            width: 230px;
+            height: 1px;
+            border-bottom: 1px dotted #9FA2A8;
+            &::after{
+                content: ' ';
+
+            }
+        }
+        .text {
+            font-size: 20px;
+            color: #9FA2A8;
+            span {
+                display: inline-block;
+                margin: 0 10px 0 0;
+                width: 20px;
+                height: 20px;
+                border: 1px solid #9FA2A8;
+                border-radius: 50%;
+                font-size: 14px;
+                text-align: center;
+                line-height: 20px;
+                vertical-align: 2px;
+            }
+        }
+        .icon { margin: 0 auto 25px; width: 150px; height: 90px;}
+        .icon1 { background: url('../../../assets/images/step1_active.png') no-repeat;}
+        .icon2 { background: url('../../../assets/images/step2.png') no-repeat;}
+        .icon3 { background: url('../../../assets/images/step3.png') no-repeat;}
+    }
+    
+}
+
+.publish-model {
+     padding-bottom: 30px;
+     overflow: hidden;
+    .icon { margin: 50px auto 30px; width: 54px; height: 45px; background: #ccc;}
+    .text {
+        margin: 0 0 55px;
+        text-align: center;
+        color: #333;
+        font-size: 20px;
+    }
+}
+
+.publish-status {
+    .title { margin: 70px 0 0; color: #0E1726; font-size: 20px; text-align: center;}
+    .warning {
+        margin: 30px auto 70px;
+        width: 464px;
+        font-size: 14px;
+        color: #9FA2A8;
+        line-height: 20px;
+        p {
+            margin: 0 0 10px;
+        }
+    }
+    .wechat-image { margin: 18px auto 40px; width: 240px; height: 240px; background:#ccc}
+}
+
+
+
