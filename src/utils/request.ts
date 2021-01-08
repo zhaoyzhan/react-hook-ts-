@@ -7,7 +7,7 @@ let errorMessage = true;
 // 创建axios实例
 const service = axios.create({
   // baseURL: process.env.REACT_APP_API, // api的base_url
-  baseURL: 'https://test-yy-center.vdongchina.com',
+  baseURL: '/api',
   timeout: 60000 // 请求超时时间
 })
 
@@ -16,13 +16,20 @@ service.interceptors.request.use(
   config => {
     // 设置Content-Type
     config.headers['Content-Type'] = setContentType(config.data['contentType']);
+    config.headers['platform'] = 3;
     if (config.data.hasOwnProperty('contentType')) {
       delete config.data['contentType'];
     }
-
+    // config.headers['Authorization'] = 'Basic MTAwNDoxMjM0NTY=';
     // 设置token
     
     // 设置token
+    if (config.data['loginT']) {
+      config.headers['Authorization'] = 'Basic MTAwNDoxMjM0NTY=';
+      delete config.data['loginT']
+    } else {
+      config.headers['Authorization'] = `Bearer ${ sessionStorage.token }`;
+    }
    
     // let stoken=localStorage.getItem('token')
     // try {
@@ -61,8 +68,7 @@ service.interceptors.response.use(
   response => {
     const resData = response.data
     // 返回成功
-    if (resData.code === 200) return resData;
-
+    if (response.status === 200) return resData;
 
     // 其他错误
     if (errorMessage) {

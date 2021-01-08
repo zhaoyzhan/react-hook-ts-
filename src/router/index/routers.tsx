@@ -16,6 +16,7 @@ import Market from '../market';
 import Setting from '../setting';
 
 const Index = Loadable(React.lazy(() => import('../../a-container/index/index')))
+const Login = Loadable(React.lazy(() => import('../../a-container/login/index')))
 
 const PrivateRoute = ({  //处理路由的问题
     children,
@@ -38,11 +39,16 @@ export default () => {
 	return (
 		<Switch>
 			<PrivateRoute 
+				path="/login"
+				>
+				<Login />
+			</PrivateRoute>
+			<PrivateRoute 
 				path="/index"
 				>
 				<Index />
 			</PrivateRoute>
-            <PrivateRoute 
+      <PrivateRoute 
 				path="/shop"
 				>
 				<Shop/>
