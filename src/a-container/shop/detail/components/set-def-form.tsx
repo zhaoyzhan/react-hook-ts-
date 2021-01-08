@@ -48,7 +48,6 @@ const Index = () => {
             >
                 <Form.Item
                     label="微信支付证书"
-                    name="headPic"
                     className="p_l_84 head_pic"
                 >
                     <div style={{display: 'flex', alignItems: 'center'}}>

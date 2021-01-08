@@ -42,7 +42,6 @@ const Index: FC<{handleRef: any}> = ({handleRef}) => {
     const [ysValue, setYsValue] = useState<string>('a');   //邮费设置
     const [jjValue, setJJValue] = useState<string>('a');   //计价方式
     const [addnums, setaddnums] = useState<any[]>([]);
-    form.validateFields(['tempName']);
     useImperativeHandle(handleRef, () => ({
         checkHandle: async () => {
             try {
@@ -59,10 +58,11 @@ const Index: FC<{handleRef: any}> = ({handleRef}) => {
     const jjHandelChange = ({value}: {value?: string}) => {
         setJJValue(value || 'a');
     }
-    const handleAddNums = () => {
-        const newNums = [...addnums]
-        newNums.push('')
-        setaddnums(newNums)
+    const handleAddNums = async (): Promise<void> => {
+        try {
+            await form.validateFields(['tempName'])
+            setaddnums([])
+        } catch (error) {}
     }
     const useTemp = useMemo(() => jjValue === 'a' ? <YfTempByNum /> : <YfTempByeight />, [jjValue])
     return <Fragment> 
