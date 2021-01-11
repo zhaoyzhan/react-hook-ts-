@@ -24,6 +24,7 @@ const mapDispatchToProps = (dispatch: Dispatch): dispPT => ({
 
 const Index = ({ addTodo, todos, testAsync, title, acFlag }: statePT & dispPT) => {
     const input = useRef<any>(null)
+    const aDiv = useRef<HTMLInputElement>(null)
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         if(!input.current.state.value) return;
@@ -36,7 +37,7 @@ const Index = ({ addTodo, todos, testAsync, title, acFlag }: statePT & dispPT) =
         <div className="padding_22_18">
             {useBread()}
             <h1>{ title }</h1>
-            <p>{ todos.length }</p>
+            <p ref={ aDiv }>{ todos.length }</p>
             <ul>
                 {
                     todos.map((todoI: todo) => (<li key={todoI.id}>{todoI.text}</li>))
