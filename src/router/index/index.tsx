@@ -6,7 +6,6 @@ import {
 	// Redirect,
 	Switch
 } from 'react-router-dom';
-import Transition from './transition';
 
 import Layout from '../layout';
 

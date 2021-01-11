@@ -31,15 +31,15 @@ const Index = (props: any) => {
     const number: number = useSelector((state: any) => state.newTest)
     const newDispatch = useDispatch()
 
-    const [mapList, setMapl] = useState<mapT[]>(defaultData)
+    const [mapList] = useState<mapT[]>(defaultData)
 
-    const setSync = (id: string): Promise<{}> => {
-        return new Promise((resolve: any, reject: any) => {
-            setTimeout(() => {
-                resolve({name: `zhangsda--${id}`})
-            }, 2000);
-        })
-    }
+    // const setSync = (id: string): Promise<{}> => {
+    //     return new Promise((resolve: any, reject: any) => {
+    //         setTimeout(() => {
+    //             resolve({name: `zhangsda--${id}`})
+    //         }, 2000);
+    //     })
+    // }
 
     useEffect(()=>{
         // (async () => {
@@ -52,6 +52,14 @@ const Index = (props: any) => {
         //     }))
         //     setMapl(res)
         // })()
+        // const res: mapT[] = await Promise.all(defaultData.map(async (item: mapT): Promise<mapT> => {
+        //     const {name}: StringObject = await setSync(item.id);
+        //     return {
+        //         ...item,
+        //         resName: name
+        //     }
+        // }))
+        // setMapl(defaultData)
     }, [])
 
     return (  
