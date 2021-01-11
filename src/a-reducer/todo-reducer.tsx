@@ -7,7 +7,6 @@ const initState: todo[] = []
 const todos = (state: todo[] = initState, action: TodoAction) => {
     switch (action.type) {
         case ADD_TODO:
-            console.log(action, 'action')
             return [
                 ...state,
                 {

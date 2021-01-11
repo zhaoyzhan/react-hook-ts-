@@ -14,9 +14,13 @@ declare interface NumberObject {
     [propName: string]: number
 }
 
+declare type ParamsVoid = () => void
+
 declare type StrParamsVoid = (v: string) => void
 
 declare type NumParamsVoid = (v: number) => void
+
+declare type BooParamsVoid = (v: boolean) => void
 
 declare module '*.scss' {
     const content: {[key: string]: any}

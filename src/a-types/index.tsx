@@ -2,7 +2,8 @@ export interface IStoreState {
     todos: todo[];
     visibilityFilter: VisibilityFilters;
     test: {
-        title: string
+        title: string,
+        acFlag: boolean
     }
 }
 

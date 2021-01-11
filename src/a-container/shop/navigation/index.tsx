@@ -1,28 +1,28 @@
 import React, { useRef } from 'react';
 import useBread from '../../../a-components/breadcrumbs/use-bread';
 import { Dispatch } from 'redux';
-import { addTodo, testAsync } from '../../../a-actions/types';
+import { addTodo } from '../../../a-actions/types';
+import { testAsync } from '../../../a-actions/test';
 import { Input, Button } from 'antd';
 import { connect } from 'react-redux';
 import { IStoreState, todo } from '../../../a-types';
 
-type statePT = { todos: todo[], title: string }
+type statePT = { todos: todo[], title: string, acFlag: boolean }
 
-type dispPT = { addTodo: StrParamsVoid, testAsync: StrParamsVoid }
+type dispPT = { addTodo: StrParamsVoid, testAsync: ParamsVoid }
 
-const mapStateToProps = (state: IStoreState): statePT => {
-    return {
-        todos: state.todos,
-        title: state.test.title
-    }
-}
+const mapStateToProps = (state: IStoreState): statePT => ({
+    todos: state.todos,
+    title: state.test.title,
+    acFlag: state.test.acFlag
+})
 
 const mapDispatchToProps = (dispatch: Dispatch): dispPT => ({
     addTodo: (text: string) => dispatch(addTodo(text)),
-    testAsync: (v: string) => dispatch(testAsync(v))
+    testAsync: () => dispatch(testAsync())
 })
 
-const Index = ({ addTodo, todos, testAsync, title }: statePT & dispPT) => {
+const Index = ({ addTodo, todos, testAsync, title, acFlag }: statePT & dispPT) => {
     const input = useRef<any>(null)
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
@@ -48,8 +48,11 @@ const Index = ({ addTodo, todos, testAsync, title }: statePT & dispPT) => {
                     <Input ref={ input } />
                     <button type="submit"> Add Todo </button>
                 </form>
+                <div style={{
+                    height: 20
+                }}></div>
+                <Button onClick={ testAsync } loading={ acFlag }>test-action</Button>
             </div>
-            <Button onClick={ () => testAsync('1234555') }>test-action</Button>
         </div>
     );
 }
