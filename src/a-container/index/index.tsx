@@ -3,6 +3,9 @@ import Pannel from './components/pannel/pannel'
 import './index.css'
 import { types, countText } from './reduce'
 import { useSelector, useDispatch } from 'react-redux'
+// import { CSSTransition } from 'react-transition-group'
+// import Transition from '../../router/index/transition'
+import { Button } from 'antd'
 interface mapT {
     name: string, 
     id: string, 
@@ -10,6 +13,7 @@ interface mapT {
 }
 const defaultData: mapT[] = [{name: '123', id: '1'}, {name: '234', id: '3'}, {name: '345', id: '5'}]
 const Index = (props: any) => {
+    const [flags, setFS] = useState<boolean>(false)
     const { state, dispatch }: { state?: any, dispatch?: any } = useContext(countText);
     const changeReduce = useCallback((type: string, meth: string) => {
         const value: number = meth === 'add' ? state.age + 1 : state.age - 1;
@@ -20,8 +24,8 @@ const Index = (props: any) => {
     }, [state, dispatch])
 
     useEffect(() => {
-        console.log('okokkkk')
-        console.log(process.env.REACT_APP_MODE, 'llllll')
+        // console.log('okokkkk')
+        // console.log(process.env.REACT_APP_MODE, 'llllll')
     })
 
     const number: number = useSelector((state: any) => state.newTest)
@@ -38,20 +42,20 @@ const Index = (props: any) => {
     }
 
     useEffect(()=>{
-        (async () => {
-            const res: mapT[] = await Promise.all(defaultData.map(async (item: mapT): Promise<mapT> => {
-                const {name}: StringObject = await setSync(item.id);
-                return {
-                    ...item,
-                    resName: name
-                }
-            }))
-            setMapl(res)
-        })()
+        // (async () => {
+        //     const res: mapT[] = await Promise.all(defaultData.map(async (item: mapT): Promise<mapT> => {
+        //         const {name}: StringObject = await setSync(item.id);
+        //         return {
+        //             ...item,
+        //             resName: name
+        //         }
+        //     }))
+        //     setMapl(res)
+        // })()
     }, [])
 
     return (  
-            <>    
+            <div>    
                 <ul>
                     {
                         mapList.map(({name, id, resName}: mapT) => <li key={id}>
@@ -68,13 +72,28 @@ const Index = (props: any) => {
                     <button onClick={() => changeReduce(types.AGE, 'add')}>{state.age} +</button>
                     <button onClick={() => changeReduce(types.AGE, 'del')}>{state.age} -</button>
                 </div> 
+                <Button onClick={() => setFS(!flags)}>收起</Button>
+                {/* <CSSTransition
+                    in={flags}
+                    classNames={{
+                        enter: 'animated',
+                        enterActive: 'bounceIn',
+                        exit: 'animated',
+                        exitActive: 'bounceOut'
+                    }}
+                    timeout={500}
+                    mountOnEnter={true}
+                    unmountOnExit={true}
+                    >
+                    <div>boxxxxxx</div>
+                </CSSTransition> */}
                 <div className="index-contain ">
                     <Pannel></Pannel>
                     <Pannel></Pannel>
                     <Pannel></Pannel>
                     <Pannel></Pannel>
                 </div>  
-            </> 
+            </div> 
     );
 }
 

@@ -33,6 +33,9 @@ const Index = ({ addTodo, todos, testAsync, title, acFlag }: statePT & dispPT) =
         }
         addTodo(input.current.state.value)
     }
+    React.useEffect(() => {
+        console.log('llllllll')
+    })
     return (
         <div className="padding_22_18">
             {useBread()}

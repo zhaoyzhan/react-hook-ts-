@@ -14,9 +14,11 @@ import Order from '../order';
 import Service from '../service';
 import Market from '../market';
 import Setting from '../setting';
+// import Transition from './transition';
 
 const Index = Loadable(React.lazy(() => import('../../a-container/index/index')))
 const Login = Loadable(React.lazy(() => import('../../a-container/login/index')))
+// const NewLo = Transition(<Login />)
 
 const PrivateRoute = ({  //处理路由的问题
     children,

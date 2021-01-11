@@ -6,12 +6,11 @@ import {
 	// Redirect,
 	Switch
 } from 'react-router-dom';
+import Transition from './transition';
 
 import Layout from '../layout';
 
 import Routers from './routers';
-import Login from '../../a-container/login/index';
-
 const MainCon = Layout(withRouter(Routers));
 
 const RouterCon = () => {
@@ -30,12 +29,6 @@ const RouterCon = () => {
 					<Redirect to="/index"/>
 				)}
 			/> */}
-			<Route 
-				path="/login" 
-				render={()=> (
-					<Login />
-				)}
-			/>
 		</Switch>
 	</Router>);
 }

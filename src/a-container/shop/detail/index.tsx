@@ -5,6 +5,7 @@ import DefEmpForm from './components/form';
 import BaseDefaultForm from './components/default-form';
 import SetEmp from './components/set-emp-form';
 import SetDef from './components/set-def-form';
+import Transition from '../../../router/index/transition'
 // import { countText } from '../../index/reduce';
 
 const tabs: string[] = ['基础信息', '收款设置']
@@ -37,4 +38,4 @@ const Index = (props: any) => {
     );
 }
 
-export default Index;
+export default Transition(Index);
