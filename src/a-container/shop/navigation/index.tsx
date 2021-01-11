@@ -1,20 +1,28 @@
 import React, { useRef } from 'react';
 import useBread from '../../../a-components/breadcrumbs/use-bread';
 import { Dispatch } from 'redux';
-import { addTodo } from '../../../a-actions/types';
-import {Input} from 'antd';
+import { addTodo, testAsync } from '../../../a-actions/types';
+import { Input, Button } from 'antd';
 import { connect } from 'react-redux';
 import { IStoreState, todo } from '../../../a-types';
 
-const mapStateToProps = (state: IStoreState): { todos: any } => ({
-    todos: state.todos
+type statePT = { todos: todo[], title: string }
+
+type dispPT = { addTodo: StrParamsVoid, testAsync: StrParamsVoid }
+
+const mapStateToProps = (state: IStoreState): statePT => {
+    return {
+        todos: state.todos,
+        title: state.test.title
+    }
+}
+
+const mapDispatchToProps = (dispatch: Dispatch): dispPT => ({
+    addTodo: (text: string) => dispatch(addTodo(text)),
+    testAsync: (v: string) => dispatch(testAsync(v))
 })
 
-const mapDispatchToProps = (dispatch: Dispatch): { addTodo: (text: string) => void } => ({
-    addTodo: (text: string) => dispatch(addTodo(text))
-})
-
-const Index = ({ addTodo, todos }: { addTodo: (text: string) => void, todos: todo[] }) => {
+const Index = ({ addTodo, todos, testAsync, title }: statePT & dispPT) => {
     const input = useRef<any>(null)
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
@@ -23,14 +31,11 @@ const Index = ({ addTodo, todos }: { addTodo: (text: string) => void, todos: tod
             return;
         }
         addTodo(input.current.state.value)
-        // dispatch(addTodo(input.current.state.value));
     }
-    // useEffect(() => {
-    //     console.log(todos, 'todos')
-    // }, [todos])
     return (
         <div className="padding_22_18">
             {useBread()}
+            <h1>{ title }</h1>
             <p>{ todos.length }</p>
             <ul>
                 {
@@ -44,6 +49,7 @@ const Index = ({ addTodo, todos }: { addTodo: (text: string) => void, todos: tod
                     <button type="submit"> Add Todo </button>
                 </form>
             </div>
+            <Button onClick={ () => testAsync('1234555') }>test-action</Button>
         </div>
     );
 }

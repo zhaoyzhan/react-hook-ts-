@@ -186,7 +186,7 @@ const getSelectKey = (menus: menuLists[], path: string): string => {
 
 const reducerFn = (state = initState, action: any) => {
 	switch (action.type) {
-        case reRoot.changeSelectKey:
+    case reRoot.changeSelectKey:
 			return changeSelectKey(state, action);
 		case reRoot.changeOpenKey:
 			return changeOpenKey(state, action);

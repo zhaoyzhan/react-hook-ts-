@@ -22,7 +22,7 @@ const Index = () => {
             
         }
     }
-    const handleMsg = () => {
+    const handleMsg = (): void => {
         if(!sessionStorage.token) {
             message.warning('尚未登录')
             return;

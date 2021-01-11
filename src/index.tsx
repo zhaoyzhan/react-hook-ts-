@@ -6,6 +6,7 @@ import store from './store/index';
 import {
 	Provider
 } from "react-redux";
+import { SkeletonComp } from './router/loadable';
 
 import './styles/animate.min.css';
 
@@ -25,15 +26,16 @@ document.onreadystatechange = function () {
 		);
 	} else {
 		ReactDOM.render(
-			<div style={{
-				display: 'flex',
-				alignItems: 'center',
-				justifyContent: 'center',
-				width: '100%',
-				height: '100%'
-			}}>
-        loading...
-      </div>,
+			<SkeletonComp />,
+			// <div style={{
+			// 	display: 'flex',
+			// 	alignItems: 'center',
+			// 	justifyContent: 'center',
+			// 	width: '100%',
+			// 	height: '100%'
+			// }}>
+      //   loading...
+      // </div>,
 			document.getElementById('root')
 		);
 	}

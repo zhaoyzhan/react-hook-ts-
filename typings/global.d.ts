@@ -14,6 +14,10 @@ declare interface NumberObject {
     [propName: string]: number
 }
 
+declare type StrParamsVoid = (v: string) => void
+
+declare type NumParamsVoid = (v: number) => void
+
 declare module '*.scss' {
     const content: {[key: string]: any}
     export = content

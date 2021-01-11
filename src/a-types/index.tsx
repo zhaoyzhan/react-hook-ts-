@@ -1,6 +1,9 @@
 export interface IStoreState {
     todos: todo[];
     visibilityFilter: VisibilityFilters;
+    test: {
+        title: string
+    }
 }
 
 export enum VisibilityFilters {
