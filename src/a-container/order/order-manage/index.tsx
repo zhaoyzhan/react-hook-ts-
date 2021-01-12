@@ -155,11 +155,10 @@ const deliverGoods = () => {
 
 const popFn = [reverse,remarks,setAddress,deliverGoods]
 
-const Pop = (props:any)=>{
-     console.log(props.fnIdx)
+const Pop = ({ fnIdx, title, setModal, modal }: { fnIdx: number, title: string, setModal: () => void, modal: boolean })=>{
      return (
-          <Modal visible={props.modal} title={props.title} handleCancel={props.setModal}
-           content={popFn[props.fnIdx]()} ></Modal>
+          <Modal visible={modal} title={title} handleCancel={setModal}
+           content={popFn[fnIdx]()} ></Modal>
      )
 }
 
