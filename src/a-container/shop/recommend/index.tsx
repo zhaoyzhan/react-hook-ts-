@@ -3,6 +3,7 @@ import useBread from "../../../a-components/breadcrumbs/use-bread";
 import { Link } from "react-router-dom";
 import { Table, Space, Button, Image } from "antd";
 import { ColumnProps } from "antd/es/table";
+import Transition from '../../../a-components/transition';
 import './index.scss'
 
 
@@ -108,4 +109,4 @@ const Index: React.SFC<IndexProps> = () => {
       );
 }
  
-export default Index;
+export default Transition(Index);

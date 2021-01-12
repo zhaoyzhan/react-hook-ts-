@@ -4,6 +4,7 @@ import React from 'react';
 import useBread from '../../../a-components/breadcrumbs/use-bread';
 import Table from './component/table';
 import { Button } from 'antd';
+import Transition from '../../../a-components/transition';
 import './index.scss';
 
 const list: {name: string, id: number}[] = [{
@@ -48,4 +49,4 @@ const Index = () => {
     </div>
 }
 
-export default Index;
+export default Transition(Index);

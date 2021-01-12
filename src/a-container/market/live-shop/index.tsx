@@ -2,6 +2,7 @@ import React, {useMemo, useCallback, useState} from 'react';
 import useBread from '../../../a-components/breadcrumbs/use-bread';
 import Tabs from '../../../a-components/tabs';
 import Table from './components/table';
+import Transition from '../../../a-components/transition';
 import {Button, Input} from 'antd';
 import './components/index.scss';
 
@@ -32,4 +33,4 @@ const Index = () => {
     </div>
 }
 
-export default Index;
+export default Transition(Index);

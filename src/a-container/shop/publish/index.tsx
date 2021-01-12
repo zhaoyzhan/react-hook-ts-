@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import useBread from '../../../a-components/breadcrumbs/use-bread';
 import Model from '../../../a-components/modal/index'
 import {Button} from 'antd'
+import Transition from '../../../a-components/transition';
 import './index.scss'
 
 
@@ -122,4 +123,4 @@ var step = ()=>{
     )
 }
  
-export default Index;
+export default Transition(Index);

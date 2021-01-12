@@ -5,6 +5,7 @@ import Detail from './components/detail';
 import Base from './components/base';
 import Norms from './components/norms';
 import Parameter from './components/parameter';
+import Transition from '../../../a-components/transition';
 
 const tabs: string[] = ['基础信息', '库存/规格', '参数', '商品详情']
 
@@ -29,4 +30,4 @@ const Index = () => {
     )
 }
 
-export default Index;
+export default Transition(Index);

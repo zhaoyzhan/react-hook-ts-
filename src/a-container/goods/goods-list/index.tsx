@@ -3,6 +3,7 @@ import useBread from '../../../a-components/breadcrumbs/use-bread';
 import { Table, Button, Input } from 'antd';
 import Image from '../../../a-components/image';
 import Confirm from '../../../a-components/confirm';
+import Transition from '../../../a-components/transition';
 import './index.scss';
 
 const columns: {}[] = [
@@ -105,4 +106,4 @@ const Index = () => {
     )
 }
 
-export default Index;
+export default Transition(Index);

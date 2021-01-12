@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { Login, NoticesNum } from '../../a-api';
 import { Button, Input, message } from 'antd';
+import Transition from '../../a-components/transition';
 
 const Index = () => {
     const refCount = useRef<any>(null);
@@ -49,4 +50,4 @@ const Index = () => {
     </div>
 }
 
-export default Index;
+export default Transition(Index);

@@ -6,6 +6,8 @@ import { testAsync } from '../../../a-actions/test';
 import { Input, Button } from 'antd';
 import { connect } from 'react-redux';
 import { IStoreState, todo } from '../../../a-types';
+import Transition from '../../../a-components/transition';
+import {StepState} from './test-is';
 
 type statePT = { todos: todo[], title: string, acFlag: boolean }
 
@@ -34,7 +36,7 @@ const Index = ({ addTodo, todos, testAsync, title, acFlag }: statePT & dispPT) =
         addTodo(input.current.state.value)
     }
     React.useEffect(() => {
-        console.log('llllllll')
+        // console.log('llllllll')
     })
     return (
         <div className="padding_22_18">
@@ -57,8 +59,11 @@ const Index = ({ addTodo, todos, testAsync, title, acFlag }: statePT & dispPT) =
                 }}></div>
                 <Button onClick={ testAsync } loading={ acFlag }>test-action</Button>
             </div>
+            <StepState className="12345">
+                <p>test-pppp</p>
+            </StepState>
         </div>
     );
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Index);
+export default Transition(connect(mapStateToProps, mapDispatchToProps)(Index));

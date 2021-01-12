@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import useBread from "../../../a-components/breadcrumbs/use-bread";
 import { Form, Input, Radio, Button } from 'antd';
 import Info from '../component/info';
+import Transition from '../../../a-components/transition';
 import './index.scss';
 
 interface validFileT {
@@ -100,4 +101,4 @@ const Index = () => {
     </div>
 }
 
-export default Index;
+export default Transition(Index);

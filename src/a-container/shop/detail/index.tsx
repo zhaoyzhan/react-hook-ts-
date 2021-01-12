@@ -5,8 +5,7 @@ import DefEmpForm from './components/form';
 import BaseDefaultForm from './components/default-form';
 import SetEmp from './components/set-emp-form';
 import SetDef from './components/set-def-form';
-import Transition from '../../../router/index/transition'
-// import { countText } from '../../index/reduce';
+import Transition from '../../../a-components/transition';
 
 const tabs: string[] = ['基础信息', '收款设置']
 

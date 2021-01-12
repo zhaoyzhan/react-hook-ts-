@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import useBread from "../../../a-components/breadcrumbs/use-bread";
-
+import Transition from '../../../a-components/transition';
 import "./index.scss";
 
 import { Table, Space, Button } from "antd";
@@ -106,4 +106,4 @@ const Index = (props: any) => {
   );
 };
 
-export default Index;
+export default Transition(Index);

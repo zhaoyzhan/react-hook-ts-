@@ -2,6 +2,7 @@ import React, {useMemo, useRef} from 'react';
 import useBread from '../../../a-components/breadcrumbs/use-bread';
 import {Button} from 'antd';
 import SortList from './components/sort-list';
+import Transition from '../../../a-components/transition';
 import './index.scss';
 const zIndex = 0
 const Index = () => {
@@ -27,4 +28,4 @@ const Index = () => {
     )
 }
 
-export default Index;
+export default Transition(Index);

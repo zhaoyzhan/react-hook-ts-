@@ -3,8 +3,7 @@ import Pannel from './components/pannel/pannel'
 import './index.css'
 import { types, countText } from './reduce'
 import { useSelector, useDispatch } from 'react-redux'
-// import { CSSTransition } from 'react-transition-group'
-// import Transition from '../../router/index/transition'
+import Transition from '../../a-components/transition'
 import { Button } from 'antd'
 interface mapT {
     name: string, 
@@ -105,4 +104,4 @@ const Index = (props: any) => {
     );
 }
 
-export default Index;
+export default Transition(Index);

@@ -3,6 +3,7 @@ import useBread from "../../../a-components/breadcrumbs/use-bread";
 import Info from '../component/info';
 import { Button } from 'antd';
 import { Link } from 'react-router-dom';
+import Transition from '../../../a-components/transition';
 import './index.scss';
 
 interface LiProps {
@@ -53,4 +54,4 @@ const Index = () => {
     </div>
 }
 
-export default Index;
+export default Transition(Index);

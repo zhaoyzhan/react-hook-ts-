@@ -6,6 +6,7 @@ import ProductItem from './components/productInfo/index'
 // import Tab from '../../../a-components/tabs/index'
 import Modal from '../../../a-components/modal/index'
 import { Input, DatePicker,Form,Button,Select} from 'antd'
+import Transition from '../../../a-components/transition';
 import './index.scss'
 // import { reverseString } from '../../../utils/stringProcessor';
 const { RangePicker } = DatePicker;
@@ -162,4 +163,4 @@ const Pop = (props:any)=>{
      )
 }
 
-export default Index;
+export default Transition(Index);

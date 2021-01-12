@@ -6,6 +6,7 @@ import { Radio, Button } from 'antd';
 import classnames from 'classnames';
 import Modal from '../../../a-components/modal';
 import Form from './component/form';
+import Transition from '../../../a-components/transition';
 import './index.scss';
 
 const tempList = [
@@ -79,4 +80,4 @@ const Index = () => {
     </div>
 }
 
-export default Index;
+export default Transition(Index);
