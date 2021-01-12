@@ -35,6 +35,9 @@ const Index = ({ addTodo, todos, testAsync, title, acFlag }: statePT & dispPT) =
         }
         addTodo(input.current.state.value)
     }
+    const Stage = React.useMemo(() => <StepState className="12345">
+        <p>test-pppp</p>
+    </StepState>, [])
     React.useEffect(() => {
         // console.log('llllllll')
     })
@@ -59,9 +62,7 @@ const Index = ({ addTodo, todos, testAsync, title, acFlag }: statePT & dispPT) =
                 }}></div>
                 <Button onClick={ testAsync } loading={ acFlag }>test-action</Button>
             </div>
-            <StepState className="12345">
-                <p>test-pppp</p>
-            </StepState>
+            { Stage }
         </div>
     );
 }
