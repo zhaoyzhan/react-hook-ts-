@@ -11,3 +11,10 @@ export const testT = (type: string, value: any): actionT => ({
     type,
     value
 })
+
+export const forOne = {
+  type: 'kkkkk',
+  value: 123456
+}
+
+export const forTwo = (value: number): any => (dispatch: Dispatch): any => dispatch(testT('kkkkk', value))

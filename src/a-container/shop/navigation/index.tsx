@@ -8,7 +8,8 @@ import { Input, Button } from 'antd';
 import { connect } from 'react-redux';
 import { IStoreState, todo } from '../../../a-types';
 import Transition from '../../../a-components/transition';
-import {StepState} from './test-is';
+import { StepState } from './test-is';
+import One from './one';
 
 type statePT = { todos: todo[], title: string, acFlag: boolean }
 
@@ -41,6 +42,7 @@ const Index: FC<statePT & dispPT> = ({ addTodo, todos, testAsync, title, acFlag,
     const Stage = React.useMemo(() => <StepState className="12345">
         <p>test-pppp</p>
     </StepState>, [])
+    const OneComp = React.useMemo(() => <One />, [])
     React.useEffect(() => {
         console.log('llllllll', testAsync)
     })
@@ -70,6 +72,7 @@ const Index: FC<statePT & dispPT> = ({ addTodo, todos, testAsync, title, acFlag,
                 <Button onClick={ () => checkOne(12) }>testArr</Button>
             </div>
             { Stage }
+            { OneComp }
         </div>
     );
 }

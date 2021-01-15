@@ -4,7 +4,8 @@ import { actionT } from '../a-actions/check'
 
 const initState = {
 	title: 'default',
-	acFlag: false
+	acFlag: false,
+	testNum: 0
 };
 
 const actDefault = (state: any) => state;
@@ -29,8 +30,10 @@ const reducerFn = (state = initState, { type, value }: actionTestT | actionT) =>
 				acFlag: value
 			}
 		case 'kkkkk':
-			console.log(value, 'kkkkk')
-			return actDefault(state);
+			return {
+				...state,
+				testNum: value
+			}
 		case 'check_one':
 			console.log(value, 'check_one')
 			return actDefault(state);

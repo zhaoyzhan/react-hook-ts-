@@ -3,7 +3,8 @@ export interface IStoreState {
     visibilityFilter: VisibilityFilters;
     test: {
         title: string,
-        acFlag: boolean
+        acFlag: boolean,
+        testNum: number
     }
 }
 
