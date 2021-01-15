@@ -2,7 +2,7 @@ import React, { useRef, FC } from 'react';
 import useBread from '../../../a-components/breadcrumbs/use-bread';
 import { Dispatch } from 'redux';
 import { addTodo } from '../../../a-actions/types';
-import { testAsync } from '../../../a-actions/test';
+import { testAsync, testArr } from '../../../a-actions/test';
 import { Input, Button } from 'antd';
 import { connect } from 'react-redux';
 import { IStoreState, todo } from '../../../a-types';
@@ -11,7 +11,7 @@ import {StepState} from './test-is';
 
 type statePT = { todos: todo[], title: string, acFlag: boolean }
 
-type dispPT = { addTodo: StrParamsVoid, testAsync: ParamsVoid }
+type dispPT = { addTodo: StrParamsVoid, testAsync: ParamsVoid, testArr: ParamsVoid }
 
 const mapStateToProps = (state: IStoreState): statePT => ({
     todos: state.todos,
@@ -21,10 +21,11 @@ const mapStateToProps = (state: IStoreState): statePT => ({
 
 const mapDispatchToProps = (dispatch: Dispatch): dispPT => ({
     addTodo: (text: string) => dispatch(addTodo(text)),
-    testAsync: () => dispatch(testAsync())
+    testAsync: () => dispatch(testAsync()),
+    testArr: () => dispatch(testArr())
 })
 
-const Index: FC<statePT & dispPT> = ({ addTodo, todos, testAsync, title, acFlag }) => {
+const Index: FC<statePT & dispPT> = ({ addTodo, todos, testAsync, title, acFlag, testArr }) => {
     const input = useRef<any>(null)
     const aDiv = useRef<HTMLInputElement>(null)
     const handleSubmit = (e: React.FormEvent) => {
@@ -39,7 +40,7 @@ const Index: FC<statePT & dispPT> = ({ addTodo, todos, testAsync, title, acFlag 
         <p>test-pppp</p>
     </StepState>, [])
     React.useEffect(() => {
-        // console.log('llllllll', addTodo)
+        console.log('llllllll', testAsync)
     })
     return (
         <div className="padding_22_18">
@@ -61,6 +62,8 @@ const Index: FC<statePT & dispPT> = ({ addTodo, todos, testAsync, title, acFlag 
                     height: 20
                 }}></div>
                 <Button onClick={ testAsync } loading={ acFlag }>test-action</Button>
+                <br/>
+                <Button onClick={ testArr }>testArr</Button>
             </div>
             { Stage }
         </div>

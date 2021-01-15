@@ -1,6 +1,5 @@
 import { SET_VISIBILITY_FILTER, ADD_TODO, TOGGLE_TODO } from '../a-constants';
 import { VisibilityFilters } from '../a-types';
-// import { Dispatch } from 'redux';
 
 let nextTodoId = 0;
 

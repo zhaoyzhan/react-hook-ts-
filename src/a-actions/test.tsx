@@ -10,6 +10,13 @@ export type actionTestT = TestActionTF | StringObject
 
 const says: string[] = ['hi', 'hello', '你好', '您好', 'hai']
 
+export const testArr = (): AnyAction => (dispatch: Dispatch): void => {
+    dispatch({
+        type: 'kkkkk',
+        value: 'kkkkk'
+    })
+}
+
 // let testF : boolean = false;
 export const testAsync = (): AnyAction => (dispatch: Dispatch): void => {
     // if(testF) return;
