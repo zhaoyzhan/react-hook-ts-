@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, FC } from 'react';
 import useBread from '../../../a-components/breadcrumbs/use-bread';
 import { Dispatch } from 'redux';
 import { addTodo } from '../../../a-actions/types';
@@ -24,7 +24,7 @@ const mapDispatchToProps = (dispatch: Dispatch): dispPT => ({
     testAsync: () => dispatch(testAsync())
 })
 
-const Index = ({ addTodo, todos, testAsync, title, acFlag }: statePT & dispPT) => {
+const Index: FC<statePT & dispPT> = ({ addTodo, todos, testAsync, title, acFlag }) => {
     const input = useRef<any>(null)
     const aDiv = useRef<HTMLInputElement>(null)
     const handleSubmit = (e: React.FormEvent) => {
@@ -39,7 +39,7 @@ const Index = ({ addTodo, todos, testAsync, title, acFlag }: statePT & dispPT) =
         <p>test-pppp</p>
     </StepState>, [])
     React.useEffect(() => {
-        // console.log('llllllll')
+        // console.log('llllllll', addTodo)
     })
     return (
         <div className="padding_22_18">

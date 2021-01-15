@@ -1,5 +1,6 @@
 import { SET_VISIBILITY_FILTER, ADD_TODO, TOGGLE_TODO } from '../a-constants';
 import { VisibilityFilters } from '../a-types';
+// import { Dispatch } from 'redux';
 
 let nextTodoId = 0;
 
@@ -28,10 +29,26 @@ export const addTodo = (text: string): IAddTodoAction => ({
     type: ADD_TODO,
 })
 
+// export const addTodo = (text: string): any => (dispatch: Dispatch, getState: any): void => {
+//     dispatch({
+//         id: nextTodoId++,
+//         text,
+//         type: ADD_TODO
+//     })
+// }
+
 export const toggleTodo = (id: number): IToggleTodoAction => ({
     id,
     type: TOGGLE_TODO
 })
+
+// export const toggleTodo = (id: number): any => (dispatch: Dispatch, getState: any): void => {
+
+//     dispatch({
+//         id,
+//         type: TOGGLE_TODO
+//     })
+// }
 
 
 export const setVisibilityFilter = (filter: string) => ({
