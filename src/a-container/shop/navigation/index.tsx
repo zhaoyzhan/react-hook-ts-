@@ -3,6 +3,7 @@ import useBread from '../../../a-components/breadcrumbs/use-bread';
 import { Dispatch } from 'redux';
 import { addTodo } from '../../../a-actions/types';
 import { testAsync, testArr } from '../../../a-actions/test';
+import { checkOne } from '../../../a-actions/check';
 import { Input, Button } from 'antd';
 import { connect } from 'react-redux';
 import { IStoreState, todo } from '../../../a-types';
@@ -11,7 +12,7 @@ import {StepState} from './test-is';
 
 type statePT = { todos: todo[], title: string, acFlag: boolean }
 
-type dispPT = { addTodo: StrParamsVoid, testAsync: ParamsVoid, testArr: ParamsVoid }
+type dispPT = { addTodo: StrParamsVoid, testAsync: ParamsVoid, testArr: ParamsVoid, checkOne: NumParamsVoid}
 
 const mapStateToProps = (state: IStoreState): statePT => ({
     todos: state.todos,
@@ -22,10 +23,11 @@ const mapStateToProps = (state: IStoreState): statePT => ({
 const mapDispatchToProps = (dispatch: Dispatch): dispPT => ({
     addTodo: (text: string) => dispatch(addTodo(text)),
     testAsync: () => dispatch(testAsync()),
-    testArr: () => dispatch(testArr())
+    testArr: () => dispatch(testArr()),
+    checkOne: (num: number) => dispatch(checkOne(num))
 })
 
-const Index: FC<statePT & dispPT> = ({ addTodo, todos, testAsync, title, acFlag, testArr }) => {
+const Index: FC<statePT & dispPT> = ({ addTodo, todos, testAsync, title, acFlag, testArr, checkOne }) => {
     const input = useRef<any>(null)
     const aDiv = useRef<HTMLInputElement>(null)
     const handleSubmit = (e: React.FormEvent) => {
@@ -64,6 +66,8 @@ const Index: FC<statePT & dispPT> = ({ addTodo, todos, testAsync, title, acFlag,
                 <Button onClick={ testAsync } loading={ acFlag }>test-action</Button>
                 <br/>
                 <Button onClick={ testArr }>testArr</Button>
+                <br/>
+                <Button onClick={ () => checkOne(12) }>testArr</Button>
             </div>
             { Stage }
         </div>

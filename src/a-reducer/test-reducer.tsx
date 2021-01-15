@@ -1,5 +1,6 @@
 
 import { actionTestT } from '../a-actions/test'
+import { actionT } from '../a-actions/check'
 
 const initState = {
 	title: 'default',
@@ -12,7 +13,7 @@ const setTest = (state: any, action: any) => {
     return Object.assign({}, state, {});
 }
 
-const reducerFn = (state = initState, { type, value }: actionTestT) => {
+const reducerFn = (state = initState, { type, value }: actionTestT | actionT) => {
 	switch (type) {
     case 'test':
 			return setTest(state, { type, value });
@@ -28,7 +29,10 @@ const reducerFn = (state = initState, { type, value }: actionTestT) => {
 				acFlag: value
 			}
 		case 'kkkkk':
-			console.log(value)
+			console.log(value, 'kkkkk')
+			return actDefault(state);
+		case 'check_one':
+			console.log(value, 'check_one')
 			return actDefault(state);
 		default:
 			return actDefault(state);
