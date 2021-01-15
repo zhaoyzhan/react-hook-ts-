@@ -43,6 +43,9 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
+创建项目  yarn create react-app react-admin-demos --template typescript 
+
+ npx --ignore-existing create-react-app my-app
 
 a-container--页面文件夹
 a-components--组件文件夹
